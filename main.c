@@ -50,11 +50,11 @@ int	main()
 {
 	data()->mlx = mlx_init();
 	data()->win = mlx_new_window(data()->mlx, 800, 800, "Chess");
-	load_img( "imgs/white.xpm", &data()->floor[0]);
-	load_img( "imgs/black.xpm", &data()->floor[1]);
+	load_img( "imgs/board.xpm", &data()->board);
+	load_img( "imgs/select.xpm", &data()->select_img);
 	new_canva();
 	init_pieces();
-	board_render(0 ,0 ,0);
+	board_render();
 	mlx_key_hook(data()->win, key, data);
 	mlx_hook(data()->win, 04, (1L << 2), key, data);
 	mlx_hook(data()->win, 17, (1L << 2), exit_game, data);

@@ -23,6 +23,7 @@ int	mouse(int event, void *param)
 	if (data()->select && data()->select->move)
 		data()->select->move(x, y);
 	else
-		data()->select = data()->map[x][y];	
+		data()->select = data()->map[x][y];
+	board_render();
 	return (0);
 }

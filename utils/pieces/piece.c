@@ -30,7 +30,7 @@ static void	move(int x, int y)
 	data()->map[data()->select->x][data()->select->y] = data()->select;
 	data()->select->is_move = 1;
 	data()->select = NULL;
-	board_render(0, 0, 0);
+	board_render();
 }
 
 t_piece *new_piece(int player, int x, int y)

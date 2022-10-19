@@ -31,6 +31,8 @@ typedef struct	s_data_img {
 	int		bits_per_pixel;
 	int		line_length;
 	int		endian;
+	int		w;
+	int		h;
 }	t_data_img;
 
 typedef struct s_piece
@@ -47,7 +49,8 @@ typedef struct s_piece
 
 typedef struct s_data
 {
-	t_data_img		floor[2];
+	t_data_img		board;
+	t_data_img		select_img;
 	void			*mlx;
 	void			*win;
 	t_data_img		canva;
@@ -57,7 +60,7 @@ typedef struct s_data
 
 
 
-void		board_render(int x, int y, int counter);
+void		board_render();
 void		print_error(char *str, int error);
 void 		new_canva();
 void 		print_img(t_data_img	data, int x1, int y1);

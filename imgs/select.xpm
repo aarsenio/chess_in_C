@@ -1,7 +1,7 @@
 /* XPM */
-static char * black_xpm[] = {
+static char * select_xpm[] = {
 "100 100 1 1",
-" 	c #7D945D",
+" 	c #EDF31D",
 "                                                                                                    ",
 "                                                                                                    ",
 "                                                                                                    ",

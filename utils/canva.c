@@ -30,10 +30,10 @@ void print_img(t_data_img	data, int x1, int y1)
 	int y;
 
 	x = -1;
-	while (++x < 100)
+	while (++x < data.w)
 	{
 		y = -1;
-		while (++y < 100)
+		while (++y < data.h)
 		{
 			__pixel(x1 + x, y1 + y, __get_color_img(data, x, y));
 		}
@@ -49,9 +49,7 @@ void new_canva()
 
 void load_img(char *file, t_data_img *img)
 {
-	int 		w;
-
-	img->img = mlx_xpm_file_to_image(data()->mlx, file, &w, &w);
+	img->img = mlx_xpm_file_to_image(data()->mlx, file, &img->w, &img->h);
 	img->addr = mlx_get_data_addr(img->img, &img->bits_per_pixel, \
 	&img->line_length, &img->endian);
 }
