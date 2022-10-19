@@ -14,8 +14,8 @@ void	init_pieces()
 	new_rook(PLAYER_1, 0, 7);
 	new_knight(PLAYER_1, 1, 7);
 	new_bishop(PLAYER_1, 2, 7);
-	new_queen(PLAYER_1, 4, 7);
-	new_king(PLAYER_1, 3, 7);
+	new_queen(PLAYER_1, 3, 7);
+	new_king(PLAYER_1, 4, 7);
 	new_bishop(PLAYER_1, 5, 7);
 	new_knight(PLAYER_1, 6, 7);
 	new_rook(PLAYER_1, 7, 7);
