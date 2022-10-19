@@ -76,6 +76,8 @@ t_piece 	*new_bishop(int player, int x, int y);
 t_piece 	*new_knight(int player, int x, int y);
 t_piece 	*new_rook(int player, int x, int y);
 t_piece 	*new_pawn(int player, int x, int y);
+int			check_diagonal(int x, int y, int x1, int y1);
+int			check_vert_hor(int x, int y, int x1, int y1);
 void		free_piece(t_piece *piece);
 
 #endif

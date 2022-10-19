@@ -1,6 +1,6 @@
 #include "../../headers/chess.h"
 
-static int	check_vert_hor(int x, int y, int x1, int y1)
+int	check_vert_hor(int x, int y, int x1, int y1)
 {
 	int i;
 	int dif_x;
