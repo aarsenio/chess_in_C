@@ -56,6 +56,7 @@ typedef struct s_data
 	t_data_img		canva;
 	t_piece			*select;
 	t_piece			*map[8][8];
+	int				turn;
 }	t_data;
 
 

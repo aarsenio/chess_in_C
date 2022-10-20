@@ -50,6 +50,7 @@ int	main()
 {
 	data()->mlx = mlx_init();
 	data()->win = mlx_new_window(data()->mlx, 800, 800, "Chess");
+	data()->turn = 1;
 	load_img( "imgs/board.xpm", &data()->board);
 	load_img( "imgs/select.xpm", &data()->select_img);
 	new_canva();
