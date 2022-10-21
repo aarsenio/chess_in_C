@@ -17,10 +17,9 @@ void	free_piece(t_piece *piece)
 
 static void	move(int x, int y)
 {
-	printf("x: %i  y: %i\n", x, y);
-	if (!data()->select->check_move(x, y))
+	if (!data()->select->check_move(x, y) || data()->select->player != data()->turn)
 	{
-		data()->select = NULL;
+		data()->select = data()->map[x][y];
 		return ;
 	}
 	data()->map[data()->select->x][data()->select->y] = NULL;
@@ -30,6 +29,10 @@ static void	move(int x, int y)
 	data()->map[data()->select->x][data()->select->y] = data()->select;
 	data()->select->is_move = 1;
 	data()->select = NULL;
+	if (data()->turn == 1)
+		data()->turn = 2;
+	else
+		data()->turn = 1;
 	board_render();
 }
 
